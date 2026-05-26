@@ -25,7 +25,14 @@ a{color:inherit;text-decoration:none}
 .tc{color:var(--terracota)}
 .muted{color:var(--muted)}
 .eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;font-weight:500}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.container {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 24px;   /* Esto da el espacio en la orilla izquierda en móvil */
+  padding-right: 24px;  /* Esto da el espacio en la orilla derecha en móvil */
+  box-sizing: border-box;
+}
 @media(min-width:1024px){.container{padding:0 40px}}
 
 /* Nav */
@@ -98,8 +105,15 @@ h2.big{margin-top:24px;font-family:'Cormorant Garamond',serif;font-weight:300;fo
 /* Servicios */
 .svc-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:24px}
 .svc-grid{margin-top:64px;display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:1.5rem;overflow:hidden}
-@media(min-width:768px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
-.svc{background:var(--card);padding:40px;transition:background .25s}
+
+@media(min-width:768px){
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .svc{padding:40px !important} /* En pantallas grandes (computadora), mantiene sus 40px originales */
+}
+
+/* AQUÍ EL CAMBIO: El padding base ahora es de 24px (arriba/abajo) y 20px (lados) para celular */
+.svc{background:var(--card);padding:24px 20px;transition:background .25s}
+
 .svc:hover{background:rgba(242,221,212,.4)}
 .svc-top{display:flex;justify-content:space-between;align-items:center}
 .svc-top .star{font-family:'Cormorant Garamond',serif;color:var(--terracota);font-size:1.8rem}
@@ -233,7 +247,7 @@ footer{border-top:1px solid var(--border);background:var(--card)}
       <p class="lead">Ayudo a negocios locales a tener una presencia digital profesional — desde su identidad visual hasta su página web y redes sociales.</p>
       <div class="hero-cta">
         <a class="btn btn-primary btn-lg" href="https://wa.me/528132537834?text=¡Hola%20Montse, quiero agendar una llamada de diagnóstico!" target="_blank" rel="noopener">Hablemos por WhatsApp <span>→</span></a>
-        <a class="link" href="#servicios">Conoce qué hago ↓</a>
+        <a class="link" href="#paquetes">Conoce qué hago ↓</a>
       </div>
       <div class="stats">
         <div><span class="num">+10</span><span class="lbl">Negocios locales</span></div>
