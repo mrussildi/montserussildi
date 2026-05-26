@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Montse Russildi · Branding y estrategia digital para negocios locales en CDMX</title>
+<meta name="description" content="Identidad de marca, sitios web y contenido para cafeterías, consultorios y comercios de CDMX. Presencia profesional sin perder lo que te hace único." />
+<meta property="og:title" content="Montse Russildi · Branding & Digital Strategy" />
+<meta property="og:description" content="Tu negocio ya es bueno. Vamos a asegurarnos de que todos lo sepan." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F0EA; --card:#FAF6F1; --ink:#1A1614; --muted:#6B5E54;
+  --border:#E5DCD2; --terracota:#C8572A; --naranja:#D97348; --durazno:#F2DDD4; --crema:#F5F0EA;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;letter-spacing:-.01em}
+.italic{font-style:italic}
+.tc{color:var(--terracota)}
+.muted{color:var(--muted)}
+.eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;font-weight:500}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+@media(min-width:1024px){.container{padding:0 40px}}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:rgba(245,240,234,.78);border-bottom:1px solid rgba(229,220,210,.6)}
+.nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:inline-flex;align-items:baseline;gap:8px}
+.logo .mr{font-family:'Cormorant Garamond',serif;font-size:1.6rem;line-height:1}
+.logo .sub{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:none;gap:36px;font-size:.9rem}
+@media(min-width:768px){.nav-links{display:flex}}
+.nav-links a:hover{color:var(--terracota)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-size:.875rem;font-weight:500;transition:all .25s ease;cursor:pointer;border:0}
+.btn-primary{background:var(--terracota);color:#fff;box-shadow:0 8px 30px -12px rgba(200,87,42,.5)}
+.btn-primary:hover{background:var(--naranja);transform:translateY(-1px);box-shadow:0 12px 40px -12px rgba(200,87,42,.7)}
+.btn-lg{padding:16px 28px}
+.btn-ghost{border:1px solid rgba(26,22,20,.15);background:transparent}
+.btn-ghost:hover{border-color:var(--terracota);color:var(--terracota)}
+.btn-cream{background:var(--crema);color:var(--ink)}
+.btn-cream:hover{background:var(--durazno)}
+.btn-outline-cream{border:1px solid rgba(245,240,234,.25);color:var(--crema)}
+.btn-outline-cream:hover{border-color:var(--crema)}
+
+/* Section labels */
+.section{border-top:1px solid var(--border)}
+.section-pad{padding:96px 0}
+@media(min-width:1024px){.section-pad{padding:128px 0}}
+.label{display:flex;align-items:center;gap:12px;color:var(--terracota);font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;font-weight:500}
+.label .num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;letter-spacing:0;text-transform:none}
+.label .bar{height:1px;width:32px;background:rgba(200,87,42,.6)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;padding:64px 0 96px}
+@media(min-width:1024px){.hero-grid{grid-template-columns:7fr 5fr;gap:48px;padding:96px 0 128px}}
+.hero h1{margin-top:32px;font-family:'Cormorant Garamond',serif;font-weight:300;line-height:.95;letter-spacing:-.02em;font-size:3.25rem}
+@media(min-width:640px){.hero h1{font-size:4.5rem}}
+@media(min-width:1024px){.hero h1{font-size:5.75rem}}
+.hero h1 .line{display:block}
+.hero p.lead{margin-top:32px;max-width:560px;font-size:1.125rem;color:var(--muted);line-height:1.7}
+.hero-cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.hero-cta .link{display:inline-flex;gap:8px;padding:14px 20px;font-size:.875rem}
+.hero-cta .link:hover{color:var(--terracota)}
+.stats{margin-top:56px;display:flex;align-items:center;gap:32px;font-size:.75rem;color:var(--muted);flex-wrap:wrap}
+.stats .num{display:block;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ink)}
+.stats .lbl{display:block;text-transform:uppercase;letter-spacing:.18em;margin-top:4px}
+.stats .div{width:1px;height:40px;background:var(--border)}
+.hero-img-wrap{position:relative}
+.hero-img-wrap .bg{position:absolute;inset:-16px;background:var(--durazno);border-radius:2rem;transform:rotate(2deg)}
+.hero-img-wrap img{position:relative;border-radius:1.75rem;aspect-ratio:1/1;object-fit:cover;width:100%;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+.tag-card{position:absolute;bottom:-24px;left:-24px;background:var(--card);padding:14px 20px;border-radius:1rem;box-shadow:0 20px 40px -10px rgba(0,0,0,.15);border:1px solid var(--border);max-width:200px}
+.tag-card .t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;line-height:1.25;margin-top:4px}
+.bg-watermark{position:absolute;right:-130px;top:-80px;font-family:'Cormorant Garamond',serif;font-size:28rem;line-height:1;color:rgba(200,87,42,.05);pointer-events:none;user-select:none;display:none}
+@media(min-width:1024px){.bg-watermark{display:block}}
+
+/* Quien */
+#quien{background:var(--card)}
+.q-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+@media(min-width:1024px){.q-grid{grid-template-columns:5fr 7fr;gap:64px}}
+.q-img-wrap{position:relative}
+.q-img-wrap .ring{position:absolute;top:-16px;left:-16px;width:96px;height:96px;border:1px solid var(--terracota);border-radius:50%}
+.q-img-wrap img{position:relative;border-radius:1.5rem;aspect-ratio:4/5;object-fit:cover;width:100%}
+.q-img-wrap .pill{position:absolute;bottom:-16px;right:-16px;background:var(--terracota);color:#fff;padding:8px 16px;border-radius:999px;font-size:.7rem;text-transform:uppercase;letter-spacing:.18em}
+h2.big{margin-top:24px;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:3rem;line-height:1.02}
+@media(min-width:1024px){h2.big{font-size:3.75rem}}
+.tagline{margin-top:16px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem}
+.values{margin-top:40px;display:grid;grid-template-columns:repeat(1,1fr);gap:24px;max-width:520px}
+.values .v .t{font-family:'Cormorant Garamond',serif;font-size:1.15rem}
+.values .v .d{font-size:.875rem;color:var(--muted);margin-top:4px}
+
+/* Servicios */
+.svc-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:24px}
+.svc-grid{margin-top:64px;display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:1.5rem;overflow:hidden}
+@media(min-width:768px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc{background:var(--card);padding:40px;transition:background .25s}
+.svc:hover{background:rgba(242,221,212,.4)}
+.svc-top{display:flex;justify-content:space-between;align-items:center}
+.svc-top .star{font-family:'Cormorant Garamond',serif;color:var(--terracota);font-size:1.8rem}
+.svc h3{margin-top:40px;font-family:'Cormorant Garamond',serif;font-size:1.875rem}
+.svc p{margin-top:16px;color:var(--muted);line-height:1.7}
+.svc ul{margin-top:28px;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.875rem}
+.svc ul li{display:flex;align-items:center;gap:8px}
+.svc ul li:before{content:"";width:16px;height:1px;background:var(--terracota)}
+
+/* Proceso */
+#proceso{background:rgba(242,221,212,.5);position:relative;overflow:hidden}
+.proc-water{position:absolute;left:-80px;bottom:0;font-family:'Cormorant Garamond',serif;font-size:22rem;line-height:1;color:rgba(200,87,42,.06);user-select:none}
+.proc-grid{margin-top:64px;display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:1.5rem;overflow:hidden;position:relative}
+@media(min-width:768px){.proc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.proc-grid{grid-template-columns:repeat(4,1fr)}}
+.step{background:var(--crema);padding:40px}
+.step-top{display:flex;justify-content:space-between;align-items:baseline}
+.step-top .n{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--terracota)}
+.step h3{margin-top:32px;font-family:'Cormorant Garamond',serif;font-size:1.5rem}
+.step p{margin-top:12px;font-size:.875rem;color:var(--muted);line-height:1.7}
+
+/* Casos */
+.casos-grid{margin-top:64px;display:grid;grid-template-columns:1fr;gap:40px}
+@media(min-width:1024px){.casos-grid{grid-template-columns:1fr 1fr}}
+.caso .img-wrap{position:relative;overflow:hidden;border-radius:1.5rem;background:var(--durazno)}
+.caso img{aspect-ratio:4/3;object-fit:cover;width:100%;transition:transform .7s}
+.caso:hover img{transform:scale(1.05)}
+.caso .chip{position:absolute;top:20px;left:20px;background:rgba(245,240,234,.95);backdrop-filter:blur(6px);padding:6px 12px;border-radius:999px;font-size:.7rem;text-transform:uppercase;letter-spacing:.18em}
+.caso-body{margin-top:32px;display:grid;grid-template-columns:2fr 1fr;gap:24px}
+.caso h3{font-family:'Cormorant Garamond',serif;font-size:1.875rem}
+.caso dl{margin-top:20px;display:flex;flex-direction:column;gap:12px;font-size:.875rem}
+.caso dt{color:var(--terracota);font-size:.7rem;text-transform:uppercase;letter-spacing:.18em}
+.caso dd{margin-top:4px;color:var(--muted)}
+.caso .result{border-left:1px solid rgba(200,87,42,.3);padding-left:20px}
+.caso .result .lbl{color:var(--terracota);font-size:.7rem;text-transform:uppercase;letter-spacing:.18em}
+.caso .result .num{font-family:'Cormorant Garamond',serif;font-size:3rem;line-height:1;margin-top:8px}
+.caso .result .desc{font-size:.75rem;color:var(--muted);margin-top:8px}
+
+/* Paquetes */
+#paquetes{background:var(--ink);color:var(--crema);position:relative;overflow:hidden}
+.pq-water{position:absolute;right:40px;top:40px;font-family:'Cormorant Garamond',serif;font-size:16rem;line-height:1;color:rgba(245,240,234,.04);user-select:none}
+.pq-label{color:var(--naranja)}
+.pq-label .bar{background:rgba(217,115,72,.6)}
+.pq-grid{margin-top:64px;display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:768px){.pq-grid{grid-template-columns:repeat(3,1fr)}}
+.pkg{border-radius:1.5rem;padding:36px;border:1px solid rgba(245,240,234,.15);background:rgba(245,240,234,.04)}
+.pkg.featured{background:var(--terracota);color:#fff;border-color:var(--terracota)}
+.pkg .pop{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;opacity:.8;margin-bottom:16px}
+.pkg h3{font-family:'Cormorant Garamond',serif;font-size:2.25rem}
+.pkg p{margin-top:16px;font-size:.875rem;line-height:1.7;color:rgba(245,240,234,.7)}
+.pkg.featured p{color:rgba(255,255,255,.85)}
+.pkg .foot{margin-top:32px;padding-top:24px;border-top:1px solid rgba(245,240,234,.15);display:flex;justify-content:space-between;align-items:center;font-size:.7rem;text-transform:uppercase;letter-spacing:.18em}
+.pkg.featured .foot{border-top-color:rgba(245,240,234,.3)}
+.pq-cta{margin-top:48px;display:flex;flex-wrap:wrap;gap:16px}
+/* Estilos para las viñetas de los paquetes */
+.pkg-bullets {
+  list-style: none; /* Quitamos el bullet genérico del navegador */
+  padding: 0;
+  margin: 25px 0; /* Separación con el texto de arriba y el pie */
+  text-align: left;
+}
+
+.pkg-bullets li {
+  font-size: 0.95rem; /* Un poco más pequeño que el párrafo principal */
+  line-height: 1.5;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+  opacity: 0.9;
+}
+
+/* Viñeta personalizada elegante (un puntito o guión fino) */
+.pkg-bullets li::before {
+  content: "—"; 
+  position: absolute;
+  left: 0;
+  color: var(--naranja); /* Cambia el color de la viñeta en las tarjetas oscuras */
+}
+
+/* Ajuste de color para las viñetas dentro de la tarjeta naranja destacada */
+.pkg.featured .pkg-bullets li::before {
+  color: #ffffff; /* Viñeta blanca en fondo naranja para que contraste perfecto */
+}
+
+/* CTA final */
+.cta-final{text-align:center;padding:112px 0}
+@media(min-width:1024px){.cta-final{padding:160px 0}}
+.cta-final .quote{font-family:'Cormorant Garamond',serif;color:var(--terracota);font-size:4rem;line-height:1}
+.cta-final h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:3rem;line-height:1.02;max-width:880px;margin:-16px auto 0}
+@media(min-width:640px){.cta-final h2{font-size:3.75rem}}
+@media(min-width:1024px){.cta-final h2{font-size:4.5rem}}
+.cta-final p{margin-top:32px;font-size:1.125rem;color:var(--muted);max-width:560px;margin-left:auto;margin-right:auto}
+
+/* Footer */
+footer{border-top:1px solid var(--border);background:var(--card)}
+.foot-row{padding:48px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.foot-row .mid{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+.foot-row .links{display:flex;gap:24px;font-size:.875rem}
+.foot-row .links a:hover{color:var(--terracota)}
+.copy{text-align:center;font-size:.75rem;color:var(--muted);padding-bottom:32px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo"><span class="mr">MR</span><span class="sub">Russildi</span></a>
+    <nav class="nav-links">
+      <a href="#quien">Quién soy</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#paquetes">Paquetes</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/528132537834?text=Hola%20Montse" target="_blank" rel="noopener">WhatsApp →</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <span class="bg-watermark display">MR</span>
+  <div class="container hero-grid">
+    <div>
+      <div class="label"><span class="num">01</span><span class="bar"></span><span>Branding · Web · Redes</span></div>
+      <h1>
+        <span class="line">Tu negocio ya es bueno.</span>
+        <span class="line italic tc">Vamos a asegurarnos</span>
+        <span class="line">de que todos lo sepan.</span>
+      </h1>
+      <p class="lead">Ayudo a negocios locales a tener una presencia digital profesional — desde su identidad visual hasta su página web y redes sociales.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="https://wa.me/528132537834?text=¡Hola%20Montse, quiero agendar una llamada de diagnóstico!" target="_blank" rel="noopener">Hablemos por WhatsApp <span>→</span></a>
+        <a class="link" href="#servicios">Conoce qué hago ↓</a>
+      </div>
+      <div class="stats">
+        <div><span class="num">+10</span><span class="lbl">Negocios locales</span></div>
+        <span class="div"></span>
+        <div><span class="num">100%</span><span class="lbl">Personalizado</span></div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="bg"></div>
+      <img src="images/hero-collage.jpg" alt="Identidad de marca terracota y crema por Montse Russildi" />
+      <div class="tag-card">
+        <div class="eyebrow tc">Nuevo</div>
+        <div class="t">"Tu marca, con presencia que compite con los grandes."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIEN SOY -->
+<section id="quien" class="section">
+  <div class="container section-pad q-grid">
+    <div class="q-img-wrap">
+      <div class="ring"></div>
+      <img src="images/Montse-Russildi.jpg" alt="Retrato de Montse Russildi" />
+      <div class="pill">+5 años de experiencia</div>
+    </div>
+    <div>
+      <div class="label"><span class="num">02</span><span class="bar"></span><span>Quién soy</span></div>
+      <h2 class="big">Soy <span class="italic tc">Montse Russildi</span>, diseñadora y estratega digital.</h2>
+      <p class="lead muted">Trabajo con cafeterías, consultorios y comercios locales para crear estrategias digitales a su medida, cuidando la esencia que los hace únicos.</p>
+      <p class="tagline">Menos fórmulas genéricas. Construyo marcas que conectan.</p>
+      <div class="values">
+        <div class="v"><div class="t">→ Estrategia focalizada</div>
+        <div class="v"><div class="t">→ Inversión justa</div>
+        <div class="v"><div class="t">→ Acompañamiento real</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="section">
+  <div class="container section-pad">
+    <div class="label"><span class="num">03</span><span class="bar"></span><span>Qué hago</span></div>
+    <div class="svc-head">
+      <h2 class="big" style="max-width:640px">Tres pilares, <span class="italic tc">tu base digital</span>.</h2>
+      <p class="muted" style="max-width:340px">Lo que de verdad mueve la aguja en tu negocio.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="svc-top"><span class="star">✦</span><span class="eyebrow muted">01</span></div>
+        <h3>Identidad de marca</h3>
+        <p>Logo, colores, tipografía y todo lo que hace que tu negocio se vea como tú — no como otro más.</p>
+        <ul><li>Logo y sistema</li><li>Paleta y tipografía</li><li>Brand book PDF</li></ul>
+      </div>
+      <div class="svc">
+        <div class="svc-top"><span class="star">✦</span><span class="eyebrow muted">02</span></div>
+        <h3>Presencia digital</h3>
+        <p>Página web, Google Business y redes listas para que te encuentren cuando te busquen.</p>
+        <ul><li>Sitio web propio</li><li>Google Business</li><li>Setup de redes</li></ul>
+      </div>
+      <div class="svc">
+        <div class="svc-top"><span class="star">✦</span><span class="eyebrow muted">03</span></div>
+        <h3>Herramientas de venta</h3>
+        <p>Materiales listos para usar en tu local o en tus redes. Convierten la atención de tus clientes en ventas.</p>
+        <ul><li>Posts mensuales</li><li>Menús y carteles</li><li>Plantillas editables</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="section">
+  <span class="proc-water">04</span>
+  <div class="container section-pad" style="position:relative">
+    <div class="label"><span class="num">04</span><span class="bar"></span><span>Cómo trabajo</span></div>
+    <h2 class="big" style="max-width:800px">Un proceso <span class="italic tc">claro</span>, sin sorpresas.</h2>
+    <ol class="proc-grid" style="list-style:none">
+      <li class="step"><div class="step-top"><span class="n">01</span><span class="eyebrow muted">Paso</span></div><h3>Te escucho</h3><p>Platicamos de tu negocio, tus clientes y qué quieres lograr.</p></li>
+      <li class="step"><div class="step-top"><span class="n">02</span><span class="eyebrow muted">Paso</span></div><h3>Te propongo</h3><p>Te mando una propuesta clara con tiempos y precios.</p></li>
+      <li class="step"><div class="step-top"><span class="n">03</span><span class="eyebrow muted">Paso</span></div><h3>Construimos</h3><p>Trabajamos juntos con revisiones hasta que quede perfecto.</p></li>
+      <li class="step"><div class="step-top"><span class="n">04</span><span class="eyebrow muted">Paso</span></div><h3>Te entrego</h3><p>Archivos listos para usar, con guía de cómo aplicarlos.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CASOS
+<section id="casos" class="section">
+  <div class="container section-pad">
+    <div class="label"><span class="num">05</span><span class="bar"></span><span>Casos de éxito</span></div>
+    <h2 class="big" style="max-width:800px">La prueba <span class="italic tc">está en los números</span>.</h2>
+    <div class="casos-grid">
+      <article class="caso">
+        <div class="img-wrap"><img src="images/case-cafe.jpg" alt="Cafetería Noma"><span class="chip">Cafetería · Condesa</span></div>
+        <div class="caso-body">
+          <div>
+            <h3>Cafetería Noma</h3>
+            <dl>
+              <div><dt>El reto</dt><dd>Tenían los mejores croissants del barrio, pero nadie los conocía fuera de su cuadra.</dd></div>
+              <div><dt>Lo que hicimos</dt><dd>Identidad completa, sitio con menú y estrategia de Instagram con 3 posts semanales.</dd></div>
+            </dl>
+          </div>
+          <div class="result"><div class="lbl">Resultado</div><div class="num">2,400</div><div class="desc">seguidores en 60 días (desde cero)</div></div>
+        </div>
+      </article>
+      <article class="caso">
+        <div class="img-wrap"><img src="images/case-vet.jpg" alt="Consultorio Patitas"><span class="chip">Veterinaria · Roma</span></div>
+        <div class="caso-body">
+          <div>
+            <h3>Consultorio Patitas</h3>
+            <dl>
+              <div><dt>El reto</dt><dd>Recomendaciones boca a boca, pero invisibles en Google cuando alguien buscaba 'veterinaria cerca'.</dd></div>
+              <div><dt>Lo que hicimos</dt><dd>Rebranding, Google Business optimizado y página web con agenda en línea.</dd></div>
+            </dl>
+          </div>
+          <div class="result"><div class="lbl">Resultado</div><div class="num">+180%</div><div class="desc">citas nuevas desde búsqueda local</div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+-->
+<!-- PAQUETES -->
+<section id="paquetes" class="section">
+  <span class="pq-water">MR</span>
+  <div class="container section-pad" style="position:relative">
+    <div class="label pq-label"><span class="num">05</span><span class="bar"></span><span>Paquetes</span></div>
+    <h2 class="big" style="max-width:800px">Tres caminos. <span class="italic" style="color:var(--naranja)">El tuyo está aquí</span>.</h2>
+    
+    <div class="pq-grid">
+      <div class="pkg">
+        <h3>Presencia</h3>
+        <p>Estrategia y esencia visual completa para nacer con fuerza desde cero.</p>
+        <ul class="pkg-bullets">
+          <li>Naming & Tagline</li>
+          <li>Google Business Profile</li>
+          <li>Brandbook completo</li>
+          <li>Diseño de posts / contenido</li>
+        </ul>
+        <div class="foot"><span>Lo básico</span><span></span></div>
+      </div>
+
+      <div class="pkg featured">
+        <div class="pop">Más popular</div>
+        <h3>Identidad</h3>
+        <p>Todo el ecosistema visual de Identidad + herramientas de venta y web listas.</p>
+        <ul class="pkg-bullets">
+          <li>Todo lo del paquete Identidad</li>
+          <li>Menú / folleto / cartel impreso</li>
+          <li>Página web propia</li>
+        </ul>
+        <div class="foot"><span>Lo escencial</span><span></span></div>
+      </div>
+
+      <div class="pkg">
+        <h3>Integral</h3>
+        <p>Estrategia, diseño y marketing activo con acompañamiento mensual.</p>
+        <ul class="pkg-bullets">
+          <li>Todo lo del paquete Presencia</li>
+          <li>Gestión de redes sociales</li>
+          <li>Estrategia de contenido continuo</li>
+        </ul>
+        <div class="foot"><span>El todo</span><span></span></div>
+      </div>
+    </div>
+
+    <div class="pq-cta">
+      <a class="btn btn-cream btn-lg" href="https://wa.me/528132537834?text=Hola%20Montse, quiero cotizar un paquete." target="_blank" rel="noopener">Paquete personalizado →</a>
+      <a class="btn btn-outline-cream btn-lg" href="https://wa.me/528132537834?text=¡Hola%20Montse, quiero agendar una llamada de diagnóstico!" target="_blank" rel="noopener">Contáctame por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section">
+  <div class="container cta-final">
+    <div class="quote">"</div>
+    <h2>¿Listo para que <span class="italic tc">más gente</span> conozca tu negocio?</h2>
+    <p>Una conversación de 15 minutos basta para saber si podemos trabajar juntos. Sin compromiso.</p>
+    <div style="margin-top:48px;display:flex;justify-content:center">
+      <a class="btn btn-primary btn-lg" href="https://wa.me/528132537834?text=¡Hola%20Montse, quiero agendar una llamada de diagnóstico!" target="_blank" rel="noopener">Escríbeme por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container foot-row">
+    <a class="logo" href="#top"><span class="mr">MR</span><span class="sub">Russildi</span></a>
+    <div class="mid">Digital · Branding · Strategy</div>
+    <div class="links">
+      <a href="https://wa.me/528132537834?text=¡Hola%20Montse, quiero agendar una llamada de diagnóstico!" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:montserussildi@gmail.com">Email</a>
+      <a href="https://instagram.com/montserussildi" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="copy">© <span id="y"></span> Montse Russildi · Hecho a mano</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
