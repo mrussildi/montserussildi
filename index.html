@@ -79,7 +79,12 @@ a{color:inherit;text-decoration:none}
 .stats .num{display:block;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ink)}
 .stats .lbl{display:block;text-transform:uppercase;letter-spacing:.18em;margin-top:4px}
 .stats .div{width:1px;height:40px;background:var(--border)}
-.hero-img-wrap{position:relative}
+.hero-img-wrap{position:relative;margin: 0 auto;max-width: 280px} /* AQUÍ EL CAMBIO: Centrada y tamaño controlado en celular */
+
+@media(min-width:1024px){
+  .hero-img-wrap{max-width: 100%} /* En computadoras regresa a su tamaño completo original */
+}
+
 .hero-img-wrap .bg{position:absolute;inset:-16px;background:var(--durazno);border-radius:2rem;transform:rotate(2deg)}
 .hero-img-wrap img{position:relative;border-radius:1.75rem;aspect-ratio:1/1;object-fit:cover;width:100%;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
 .tag-card{position:absolute;bottom:-24px;left:-24px;background:var(--card);padding:14px 20px;border-radius:1rem;box-shadow:0 20px 40px -10px rgba(0,0,0,.15);border:1px solid var(--border);max-width:200px}
@@ -91,12 +96,22 @@ a{color:inherit;text-decoration:none}
 #quien{background:var(--card)}
 .q-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
 @media(min-width:1024px){.q-grid{grid-template-columns:5fr 7fr;gap:64px}}
-.q-img-wrap{position:relative}
+.q-img-wrap{position:relative;margin: 0 auto;max-width: 280px} /* AQUÍ EL CAMBIO: Centrada y con un tamaño máximo ideal para celular */
+
+@media(min-width:768px){
+  .q-img-wrap{max-width: 100%} /* En pantallas grandes vuelve a ocupar todo el ancho de su columna */
+}
+
 .q-img-wrap .ring{position:absolute;top:-16px;left:-16px;width:96px;height:96px;border:1px solid var(--terracota);border-radius:50%}
 .q-img-wrap img{position:relative;border-radius:1.5rem;aspect-ratio:4/5;object-fit:cover;width:100%}
 .q-img-wrap .pill{position:absolute;bottom:-16px;right:-16px;background:var(--terracota);color:#fff;padding:8px 16px;border-radius:999px;font-size:.7rem;text-transform:uppercase;letter-spacing:.18em}
-h2.big{margin-top:24px;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:3rem;line-height:1.02}
-@media(min-width:1024px){h2.big{font-size:3.75rem}}
+/* AJUSTE AQUÍ: Cambiamos line-height a 1.15 y agregamos espacio abajo con margin-bottom */
+h2.big{margin-top:24px;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:3rem;line-height:1.15;margin-bottom:24px}
+
+@media(min-width:1024px){
+  /* En compu podemos ajustar el tamaño y dejar un interlineado fino de 1.05 si el diseño lo pide */
+  h2.big{font-size:3.75rem;line-height:1.05;margin-bottom:32px}
+}
 .tagline{margin-top:16px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem}
 .values{margin-top:40px;display:grid;grid-template-columns:repeat(1,1fr);gap:24px;max-width:520px}
 .values .v .t{font-family:'Cormorant Garamond',serif;font-size:1.15rem}
@@ -127,9 +142,17 @@ h2.big{margin-top:24px;font-family:'Cormorant Garamond',serif;font-weight:300;fo
 #proceso{background:rgba(242,221,212,.5);position:relative;overflow:hidden}
 .proc-water{position:absolute;left:-80px;bottom:0;font-family:'Cormorant Garamond',serif;font-size:22rem;line-height:1;color:rgba(200,87,42,.06);user-select:none}
 .proc-grid{margin-top:64px;display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:1.5rem;overflow:hidden;position:relative}
-@media(min-width:768px){.proc-grid{grid-template-columns:repeat(2,1fr)}}
+
+@media(min-width:768px){
+  .proc-grid{grid-template-columns:repeat(2,1fr)}
+  .step{padding:40px !important} /* Regresa a su espacio amplio en pantallas grandes */
+}
+
 @media(min-width:1024px){.proc-grid{grid-template-columns:repeat(4,1fr)}}
-.step{background:var(--crema);padding:40px}
+
+/* AQUÍ EL CAMBIO: Reducimos espacio vertical (24px) y horizontal (20px) en celular */
+.step{background:var(--crema);padding:24px 20px}
+
 .step-top{display:flex;justify-content:space-between;align-items:baseline}
 .step-top .n{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--terracota)}
 .step h3{margin-top:32px;font-family:'Cormorant Garamond',serif;font-size:1.5rem}
@@ -158,26 +181,39 @@ h2.big{margin-top:24px;font-family:'Cormorant Garamond',serif;font-weight:300;fo
 .pq-label{color:var(--naranja)}
 .pq-label .bar{background:rgba(217,115,72,.6)}
 .pq-grid{margin-top:64px;display:grid;grid-template-columns:1fr;gap:24px}
-@media(min-width:768px){.pq-grid{grid-template-columns:repeat(3,1fr)}}
-.pkg{border-radius:1.5rem;padding:36px;border:1px solid rgba(245,240,234,.15);background:rgba(245,240,234,.04)}
+
+@media(min-width:768px){
+  .pq-grid{grid-template-columns:repeat(3,1fr)}
+  /* En tablets y compus mantenemos el padding amplio original */
+  .pkg{padding: 36px !important}
+  /* En compu el espacio entre título y descripción vuelve a 16px */
+  .pkg p{margin-top: 16px !important}
+}
+
+/* AQUÍ EL CAMBIO PARA MÓVIL: Reducimos padding vertical a 24px y horizontal a 20px */
+.pkg{border-radius:1.5rem;padding: 24px 20px;border:1px solid rgba(245,240,234,.15);background:rgba(245,240,234,.04)}
 .pkg.featured{background:var(--terracota);color:#fff;border-color:var(--terracota)}
-.pkg .pop{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;opacity:.8;margin-bottom:16px}
+.pkg .pop{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;opacity:.8;margin-bottom:12px} /* Bajé un poquito el margen en móvil */
 .pkg h3{font-family:'Cormorant Garamond',serif;font-size:2.25rem}
-.pkg p{margin-top:16px;font-size:.875rem;line-height:1.7;color:rgba(245,240,234,.7)}
+
+/* AQUÍ EL CAMBIO PARA MÓVIL: Espacio sutil entre nombre y descripción para que no se amontone */
+.pkg p{margin-top: 10px;font-size:.875rem;line-height:1.7;color:rgba(245,240,234,.7)}
 .pkg.featured p{color:rgba(255,255,255,.85)}
+
 .pkg .foot{margin-top:32px;padding-top:24px;border-top:1px solid rgba(245,240,234,.15);display:flex;justify-content:space-between;align-items:center;font-size:.7rem;text-transform:uppercase;letter-spacing:.18em}
 .pkg.featured .foot{border-top-color:rgba(245,240,234,.3)}
 .pq-cta{margin-top:48px;display:flex;flex-wrap:wrap;gap:16px}
+
 /* Estilos para las viñetas de los paquetes */
 .pkg-bullets {
-  list-style: none; /* Quitamos el bullet genérico del navegador */
+  list-style: none;
   padding: 0;
-  margin: 25px 0; /* Separación con el texto de arriba y el pie */
+  margin: 20px 0; /* Bajé de 25px a 20px para ajustar en móvil */
   text-align: left;
 }
 
 .pkg-bullets li {
-  font-size: 0.95rem; /* Un poco más pequeño que el párrafo principal */
+  font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 12px;
   position: relative;
@@ -185,17 +221,17 @@ h2.big{margin-top:24px;font-family:'Cormorant Garamond',serif;font-weight:300;fo
   opacity: 0.9;
 }
 
-/* Viñeta personalizada elegante (un puntito o guión fino) */
+/* Viñeta personalizada elegante */
 .pkg-bullets li::before {
   content: "—"; 
   position: absolute;
   left: 0;
-  color: var(--naranja); /* Cambia el color de la viñeta en las tarjetas oscuras */
+  color: var(--naranja);
 }
 
-/* Ajuste de color para las viñetas dentro de la tarjeta naranja destacada */
+/* Ajuste de color para las viñetas dentro de la tarjeta destacada */
 .pkg.featured .pkg-bullets li::before {
-  color: #ffffff; /* Viñeta blanca en fondo naranja para que contraste perfecto */
+  color: #ffffff;
 }
 
 /* CTA final */
@@ -211,7 +247,24 @@ h2.big{margin-top:24px;font-family:'Cormorant Garamond',serif;font-weight:300;fo
 footer{border-top:1px solid var(--border);background:var(--card)}
 .foot-row{padding:48px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
 .foot-row .mid{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
-.foot-row .links{display:flex;gap:24px;font-size:.875rem}
+
+/* AJUSTE AQUÍ: En celular toma todo el ancho de la línea de abajo y se centra */
+.foot-row .links{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  font-size:.875rem;
+  width: 100%; /* Obliga a los links a bajarse juntos a su propia línea */
+}
+
+/* En computadoras, deja de ocupar el 100% para alinearse a la derecha de forma normal */
+@media(min-width:768px){
+  .foot-row .links {
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+
 .foot-row .links a:hover{color:var(--terracota)}
 .copy{text-align:center;font-size:.75rem;color:var(--muted);padding-bottom:32px}
 </style>
@@ -238,7 +291,7 @@ footer{border-top:1px solid var(--border);background:var(--card)}
   <span class="bg-watermark display">MR</span>
   <div class="container hero-grid">
     <div>
-      <div class="label"><span class="num">01</span><span class="bar"></span><span>Branding · Web · Redes</span></div>
+      <div class="label"><span class="num">01</span><span class="bar"></span><span>Digital · Branding · Strategy</span></div>
       <h1>
         <span class="line">Tu negocio ya es bueno.</span>
         <span class="line italic tc">Vamos a asegurarnos</span>
@@ -247,7 +300,7 @@ footer{border-top:1px solid var(--border);background:var(--card)}
       <p class="lead">Ayudo a negocios locales a tener una presencia digital profesional — desde su identidad visual hasta su página web y redes sociales.</p>
       <div class="hero-cta">
         <a class="btn btn-primary btn-lg" href="https://wa.me/528132537834?text=¡Hola%20Montse, quiero agendar una llamada de diagnóstico!" target="_blank" rel="noopener">Hablemos por WhatsApp <span>→</span></a>
-        <a class="link" href="#paquetes">Conoce qué hago ↓</a>
+        <a class="link" href="#servicios">Conoce qué hago ↓</a>
       </div>
       <div class="stats">
         <div><span class="num">+10</span><span class="lbl">Negocios locales</span></div>
@@ -259,7 +312,6 @@ footer{border-top:1px solid var(--border);background:var(--card)}
       <div class="bg"></div>
       <img src="images/hero-collage.jpg" alt="Identidad de marca terracota y crema por Montse Russildi" />
       <div class="tag-card">
-        <div class="eyebrow tc">Nuevo</div>
         <div class="t">"Tu marca, con presencia que compite con los grandes."</div>
       </div>
     </div>
@@ -278,12 +330,7 @@ footer{border-top:1px solid var(--border);background:var(--card)}
       <div class="label"><span class="num">02</span><span class="bar"></span><span>Quién soy</span></div>
       <h2 class="big">Soy <span class="italic tc">Montse Russildi</span>, diseñadora y estratega digital.</h2>
       <p class="lead muted">Trabajo con cafeterías, consultorios y comercios locales para crear estrategias digitales a su medida, cuidando la esencia que los hace únicos.</p>
-      <p class="tagline">Menos fórmulas genéricas. Construyo marcas que conectan.</p>
-      <div class="values">
-        <div class="v"><div class="t">→ Estrategia focalizada</div>
-        <div class="v"><div class="t">→ Inversión justa</div>
-        <div class="v"><div class="t">→ Acompañamiento real</div>
-      </div>
+      <p class="tagline">Te acompaño en cada paso. Una inversión justa.</p>
     </div>
   </div>
 </section>
@@ -300,8 +347,8 @@ footer{border-top:1px solid var(--border);background:var(--card)}
       <div class="svc">
         <div class="svc-top"><span class="star">✦</span><span class="eyebrow muted">01</span></div>
         <h3>Identidad de marca</h3>
-        <p>Logo, colores, tipografía y todo lo que hace que tu negocio se vea como tú — no como otro más.</p>
-        <ul><li>Logo y sistema</li><li>Paleta y tipografía</li><li>Brand book PDF</li></ul>
+        <p>Logo, colores, tipografía y todo lo que hace que tu negocio se vea como tú — no como uno más.</p>
+        <ul><li>Logo, naming y tagline</li><li>Paleta y tipografía</li><li>Brand book PDF</li></ul>
       </div>
       <div class="svc">
         <div class="svc-top"><span class="star">✦</span><span class="eyebrow muted">02</span></div>
@@ -393,9 +440,9 @@ footer{border-top:1px solid var(--border);background:var(--card)}
       <div class="pkg featured">
         <div class="pop">Más popular</div>
         <h3>Identidad</h3>
-        <p>Todo el ecosistema visual de Identidad + herramientas de venta y web listas.</p>
+        <p>Todo el ecosistema visual de Presencia + herramientas de venta y web listas.</p>
         <ul class="pkg-bullets">
-          <li>Todo lo del paquete Identidad</li>
+          <li>Todo lo del paquete Presencia</li>
           <li>Menú / folleto / cartel impreso</li>
           <li>Página web propia</li>
         </ul>
@@ -406,7 +453,7 @@ footer{border-top:1px solid var(--border);background:var(--card)}
         <h3>Integral</h3>
         <p>Estrategia, diseño y marketing activo con acompañamiento mensual.</p>
         <ul class="pkg-bullets">
-          <li>Todo lo del paquete Presencia</li>
+          <li>Todo lo del paquete Identidad</li>
           <li>Gestión de redes sociales</li>
           <li>Estrategia de contenido continuo</li>
         </ul>
